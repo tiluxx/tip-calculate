@@ -1,0 +1,70 @@
+/* Mobile */
+@media (min-width: 360px) and (max-width: 739px) {
+    :root {
+        --border-radius: 8px;
+    }
+
+    button {
+        font-size: 2.4rem;
+        padding: 8% 10px;
+    }
+
+    /* Content */
+    /* Content option*/
+    .content {
+        box-sizing: content-box;
+        width: 100%;
+        background-color: var(--white-color);
+        border-radius: 1.2rem;
+        box-shadow: 0 8px 16px 0 rgba(127, 156, 159, 0.2), 0 12px 40px 0 rgba(127, 156, 159, 0.19);
+    }
+    .content-wrap {
+        flex-wrap: wrap;
+        margin: 36px;
+        gap: 24px;
+    }
+
+    .content__option__bill-title,
+    .content__option__tip-title,
+    .content__option__number-people-title__heading {
+        color: var(--neutral-dark-grayish-cyan);
+        margin-bottom: 10px;
+        font-size: 1.6rem;
+    }
+
+    .content__option__tip-boxes {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px 20px;
+        margin: 10px 0;
+    }
+
+    /* Content result */
+    .content__result-wrapper {
+        margin-top: 60px;
+    }
+
+    .content__result__reset__btn {
+        margin-top: 20px;
+    }
+    
+    /* Attribution */
+    .attribution {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+/* >= Tablet */
+@media (min-width: 740px) {}
+
+/* PC medium resolution > */
+@media (min-width: 1113px) {}
+
+/* Tablet - PC low resolution */
+@media (min-width: 740px) and (max-width: 1023px) {
+
+}
+
+/* > PC low resolution */
+@media (min-width: 1024px) and (max-width: 1239px) {}

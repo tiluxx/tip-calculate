@@ -1,0 +1,90 @@
+:root {
+    --primary-strong-cyan: hsl(172, 67%, 45%);
+    
+    --neutral-very-dark-cyan: hsl(183, 100%, 15%);
+    --neutral-dark-grayish-cyan: hsl(186, 14%, 43%);
+    --neutral-dark-grayish-cyan-2: hsl(186, 14%, 56%);
+    --neutral-light-grayish-cyan: hsl(185, 41%, 84%);
+    --neutral-light-grayish-cyan-2: hsl(189, 41%, 97%);
+
+    --white-color: hsl(0, 0%, 100%);
+    --border-radius: 4px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 1.6rem;
+    font-family: 'Space Mono', monospace;
+    letter-spacing: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--neutral-light-grayish-cyan);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+input {
+    font-family: 'Space Mono', monospace;
+    font-size: 2.4rem;
+    font-weight: 700;
+    text-align: right;
+    color: var(--neutral-very-dark-cyan);
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--neutral-light-grayish-cyan-2);
+}
+
+::placeholder {
+    color: var(--neutral-dark-grayish-cyan-2);
+    opacity: 1; /* Firefox */
+}
+
+/* IE 10-11 */
+:-ms-input-placeholder {
+    color: var(--neutral-dark-grayish-cyan-2);
+}
+
+/* ME */
+::-ms-input-placeholder {
+    color: var(--neutral-dark-grayish-cyan-2);
+}
+
+input:focus {
+    border: 2px solid var(--primary-strong-cyan);
+}
+
+input:hover {
+    border: 2px solid var(--primary-strong-cyan);
+}
+
+button {
+    font-family: 'Space Mono', monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--white-color);
+    padding: 5% 10px;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: var(--neutral-very-dark-cyan);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--neutral-light-grayish-cyan);
+    color: var(--neutral-very-dark-cyan);
+}
+
+.btn-selected {
+    background-color: var(--primary-strong-cyan);
+    color: var(--neutral-very-dark-cyan);
+}

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="./assets/css/base.css">
+  <link rel="stylesheet" href="./assets/css/grid.css">
+  <link rel="stylesheet" href="./assets/css/main.css">
+  <link rel="stylesheet" href="./assets/css/responsive.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+  
+</head>
+<body>
+  <div class="header">
+    <h1 class="header__title">
+      <span>Spli</span>
+      <span>tter</span>
+    </h1>
+  </div>
+
+  <div class="content">
+    <div class="content-wrap row">
+      <!-- Begin option -->
+      <!-- <form action="" method="POST" id="billAndTipForm"> -->
+        <div class="content__option-wrap l-6 m-6 c-12">
+          <div class="wrapper">
+            <!-- Bill part -->
+            <div class="content__option__bill">
+              <h3 class="content__option__bill-title">Bill</h3>
+              <div class="content__option__bill-amount-box">
+                <img src="./assets/images/icon-dollar.svg" alt="" class="content__option__bill-amount-box__icon">
+                <input type="text" id="bill__input" class="content__option__bill-amount-box__input" placeholder="0">
+              </div>
+            </div>
+    
+            <!-- Tips part -->
+            <div class="content__option__tip">
+              <h3 class="content__option__tip-title">Select Tip %</h3>
+              <div id="content__option__tip-boxes" class="content__option__tip-boxes">
+                  <button onClick="clickTipHandler(this.value)" class="content__option__tip-boxes-percent" value="0.05">
+                    <span>5%</span>
+                  </button>
+                  <button onClick="clickTipHandler(this.value)" class="content__option__tip-boxes-percent" value="0.1">
+                    <span>10%</span>
+                  </button>
+                  <button onClick="clickTipHandler(this.value)" class="content__option__tip-boxes-percent" value="0.15">
+                    <span>15%</span>
+                  </button>
+                  <button onClick="clickTipHandler(this.value)" class="content__option__tip-boxes-percent" value="0.25">
+                    <span>25%</span>
+                  </button>
+                  <button onClick="clickTipHandler(this.value)" class="content__option__tip-boxes-percent" value="0.5">
+                    <span>50%</span>
+                  </button>
+                  <input type="text" id="custom__input" class="content__option__tip-boxes-custom-input" placeholder="Custom">
+              </div>
+            </div>
+    
+            <!-- Number of People part -->
+            <div class="content__option__number-people">
+              <div class="content__option__number-people-title row no-gutters">
+                <h3 class="content__option__number-people-title__heading">Number of People</h3>
+                <h3 id="number-people-title__error" class="content__option__number-people-title__error">Can't be zero</h3>
+              </div>
+              <div class="content__option__number-people-box">
+                <img src="./assets/images/icon-person.svg" alt="" class="content__option__number-people-box__icon">
+                <input type="text" id="number-people__input" class="content__option__number-people-box__input" placeholder="0">
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- </form> -->
+      <!-- End option -->
+  
+      <!-- Begin result -->
+      <div class="content__result-wrap l-6 m-6 c-12">
+        <div class="content__result-wrapper row no-gutters">
+          <!-- Tip Amount part -->
+          <div class="content__result__tip-amount row no-gutters">
+            <!-- Tip Amount tile -->
+            <div class="content__result__tip-amount__tile-box">
+              <h3 class="content__result__tip-amount__tile-box__title">Tip Amount</h3>
+              <h4 class="content__result__tip-amount__tile-box__subtitle">/ person</h4>
+            </div>
+  
+            <!-- Tip amount number -->
+            <div class="content__result__tip-amount__number-box">
+              <h2 id="tip__amount" class="content__result__tip-amount__number-box__number">$0.00</h2>
+            </div>
+          </div>
+  
+          <!-- Total part -->
+          <div class="content__result__total row no-gutters">
+            <!-- Total title -->
+            <div class="content__result__total__title-box">
+              <h3 class="content__result__total__title-box__title">Total</h3>
+              <h4 class="content__result__total__title-box__subtitle">/ person</h4>
+            </div>
+  
+            <!-- Total number -->
+            <div class="content__result__total__number-box">
+              <h2 id="total__amount" class="content__result__total__number-box__number">$0.00</h2>
+            </div>
+          </div>
+          <!-- Reset btn part -->
+          <!-- <div class="content__result__reset">
+            <div class="content__result__reset__wrapper"> -->
+              <button class="content__result__reset__btn">Reset</button>
+            <!-- </div>
+          </div> -->
+  
+        </div>
+      </div>
+      <!-- End result -->
+
+    </div>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Le Thanh Tien</a>.
+  </div>
+
+  <script src="./assets/scripts/input.js"></script>
+</body>
+</html>
